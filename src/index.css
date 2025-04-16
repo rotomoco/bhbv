@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased bg-gray-50;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+/* Smooth transitions */
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Parallax container */
+.parallax-container {
+  perspective: 1000px;
+  overflow-x: hidden;
+}
+
+.parallax-element {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effects */
+.button-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.button-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image hover effects */
+.image-hover {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.image-hover img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-hover:hover img {
+  transform: scale(1.05);
+}
+
+/* Text hover effects */
+.text-hover {
+  position: relative;
+}
+
+.text-hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.text-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
