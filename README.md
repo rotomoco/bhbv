@@ -1,3 +1,3 @@
 # bhbv
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/rotomoco/bhbv)
+Neue Vereins-Seite für den BHBV
