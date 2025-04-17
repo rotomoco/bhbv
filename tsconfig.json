@@ -4,5 +4,8 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
-  "noImplicitAny": false,
+  "compilerOptions": {
+    "noImplicitAny": true
+    // weitere Optionen hier
+  },
 }
