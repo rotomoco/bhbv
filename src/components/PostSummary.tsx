@@ -46,7 +46,7 @@ export default function PostSummary({ post, isReversed }: PostSummaryProps) {
             className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300"
           />
         ) : (
-          <div className="w-full h-128 bg-gray-200 rounded-lg shadow-md flex items-center justify-center hover-scale">
+          <div className="w-full h-64 bg-gray-200 rounded-lg shadow-md flex items-center justify-center hover-scale">
             <div className="text-gray-600 text-center px-4">
               <ImageIcon size={48} className="mx-auto mb-2 text-gray-400" />
               <p>
