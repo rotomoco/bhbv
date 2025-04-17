@@ -4,5 +4,6 @@ export interface Post {
   content: string;
   image: string | null;
   created_at: string;
+  event_date: string;
   user_id: string;
 }

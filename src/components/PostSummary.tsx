@@ -43,10 +43,10 @@ export default function PostSummary({ post, isReversed }: PostSummaryProps) {
           <img
             src={post.image}
             alt={post.title}
-            className="w-full h-64 object-cover rounded-lg shadow-md transition-transform duration-300"
+            className="w-full h-96 object-cover rounded-lg shadow-md transition-transform duration-300"
           />
         ) : (
-          <div className="w-full h-64 bg-gray-200 rounded-lg shadow-md flex items-center justify-center hover-scale">
+          <div className="w-full h-128 bg-gray-200 rounded-lg shadow-md flex items-center justify-center hover-scale">
             <div className="text-gray-600 text-center px-4">
               <ImageIcon size={48} className="mx-auto mb-2 text-gray-400" />
               <p>
@@ -59,8 +59,8 @@ export default function PostSummary({ post, isReversed }: PostSummaryProps) {
         )}
       </div>
       
-      <div className="md:w-1/2 flex flex-col justify-center">
-        <time className="text-sm text-gray-500 mb-2">
+      <div className="md:w-1/2 flex flex-col">
+        <time className="text-lg font-bold text-gray-800 mb-2">
           {format(new Date(post.createdAt), 'dd. MMMM yyyy', { locale: de })}
         </time>
         <h2 className="text-2xl font-bold mb-4 text-hover">{post.title}</h2>

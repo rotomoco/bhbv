@@ -161,13 +161,28 @@ export default function CreatePost() {
 
           <div>
             <label htmlFor="created_at" className="block text-sm font-medium text-gray-700">
-              Datum
+              Datum der Erstellung
             </label>
             <input
               type="date"
               id="created_at"
               name="created_at"
               value={formData.created_at}
+              onChange={handleChange}
+              required
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="event_date" className="block text-sm font-medium text-gray-700">
+              Datum der Veranstaltung
+            </label>
+            <input
+              type="date"
+              id="event_date"
+              name="event_date"
+              value={formData.event_date}
               onChange={handleChange}
               required
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
