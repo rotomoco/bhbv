@@ -81,7 +81,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-black bg-opacity-40" />
           <div className="relative text-white text-center px-4 transform hover-scale">
-            <h1 className="text-5xl font-bold mb-4">Willkommen beim VC-BHBV</h1>
+            <h1 className="text-5xl font-bold mb-4">Willkommen beim BHBV</h1>
             <p className="text-xl">Baerler Heimat- und Bürgerverein e.V.</p>
           </div>
         </div>
