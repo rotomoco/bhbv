@@ -33,7 +33,7 @@ export default function PostSummary({ post, isReversed }: PostSummaryProps) {
   return (
     <article 
       ref={articleRef}
-      className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 mb-12 opacity-0 animate-fade-in card-hover`}
+      className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 mb-12 opacity-0 animate-fade-in`}
       style={{
         animation: 'fadeIn 0.6s ease-out forwards',
       }}
@@ -70,13 +70,15 @@ export default function PostSummary({ post, isReversed }: PostSummaryProps) {
         <p className="text-gray-600 mb-6 line-clamp-3">{post.content}</p>
         <Link
           to={`/post/${post.id}`}
-          className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors button-hover group"
+          className="text-2xl inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors group"
         >
           Weiterlesen
-          <ArrowRight size={20} className="ml-2 transform transition-transform group-hover:translate-x-1" />
+          <ArrowRight size={40} className="ml-2 transform transition-transform group-hover:translate-x-1" />
         </Link>
         <time className="absolute bottom-0 text-sm text-gray-400 mb-2">
-          erstellt am {format(new Date(post.createdAt), 'dd. MMMM yyyy', { locale: de })}
+          erstellt von 
+          (user_id)
+           am {format(new Date(post.createdAt), 'dd. MMMM yyyy', { locale: de })}
         </time>
       </div>
     </article>
