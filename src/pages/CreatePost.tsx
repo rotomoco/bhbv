@@ -15,6 +15,7 @@ export default function CreatePost() {
     content: '',
     image: '',
     created_at: format(new Date(), "yyyy-MM-dd"),
+    event_date: format(new Date(), "yyyy-MM-dd"),
   });
 
   const handleImageUpload = async (file: File) => {
@@ -30,7 +31,7 @@ export default function CreatePost() {
         .upload(filePath, file, {
           cacheControl: '3600',
           upsert: false,
-          onUploadProgress: (progress) => {
+          onUploadProgress: (progress: { loaded: number; total: number; }) => {
             setUploadProgress((progress.loaded / progress.total) * 100);
           },
         });

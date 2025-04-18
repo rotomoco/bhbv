@@ -60,10 +60,13 @@ export default function PostSummary({ post, isReversed }: PostSummaryProps) {
       </div>
       
       <div className="md:w-1/2 flex flex-col">
-        <time className="text-lg font-bold text-gray-800 mb-2">
-          {format(new Date(post.createdAt), 'dd. MMMM yyyy', { locale: de })}
-        </time>
+        
+        
+
         <h2 className="text-2xl font-bold mb-4 text-hover">{post.title}</h2>
+        <time className="text-lg font-bold text-gray-800 mb-2">
+          am {format(new Date(post.event_date), 'dd. MMMM yyyy', { locale: de })}
+        </time>
         <p className="text-gray-600 mb-6 line-clamp-3">{post.content}</p>
         <Link
           to={`/post/${post.id}`}
@@ -72,6 +75,9 @@ export default function PostSummary({ post, isReversed }: PostSummaryProps) {
           Weiterlesen
           <ArrowRight size={20} className="ml-2 transform transition-transform group-hover:translate-x-1" />
         </Link>
+        <time className="absolute bottom-0 text-sm text-gray-400 mb-2">
+          erstellt am {format(new Date(post.createdAt), 'dd. MMMM yyyy', { locale: de })}
+        </time>
       </div>
     </article>
   );
