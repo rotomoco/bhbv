@@ -75,7 +75,7 @@ export default function PostSummary({ post, isReversed }: PostSummaryProps) {
           Weiterlesen
           <ArrowRight size={40} className="ml-2 transform transition-transform group-hover:translate-x-1" />
         </Link>
-        <time className="absolute bottom-0 text-sm text-gray-400 mb-2">
+        <time className="text-sm text-gray-400 mb-2">
           erstellt von 
           (user_id)
            am {format(new Date(post.createdAt), 'dd. MMMM yyyy', { locale: de })}
