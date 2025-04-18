@@ -1,8 +1,8 @@
 export const emailjsConfig = {
-  serviceId: 'YOUR_SERVICE_ID',
-  publicKey: 'YOUR_PUBLIC_KEY',
+  serviceId: 'service_s02ovav',
+  publicKey: 'TM9yJpVTsLFWobzA5',
   templates: {
-    contact: 'YOUR_CONTACT_TEMPLATE_ID',
-    membership: 'YOUR_MEMBERSHIP_TEMPLATE_ID'
+    contact: 'template_nmgwmvj',
+    membership: 'template_vy5wty7'
   }
 };
